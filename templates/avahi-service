@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+  <name replace-wildcards="yes"><%= mdns_service_name -%></name>
+  <service>
+    <type><%= mdns_service_type -%></type>
+    <port><%= mdns_service_port -%></port>
+<% mdns_service_txt.each do |txt| -%>
+    <txt-record><%= txt -%></txt-record>
+<% end -%>
+  </service>
+</service-group>

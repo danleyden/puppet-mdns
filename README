@@ -1,0 +1,7 @@
+mdns puppet module
+
+Author: Daniel Leyden
+
+Supports the installation of avahi and publishing of services
+
+
